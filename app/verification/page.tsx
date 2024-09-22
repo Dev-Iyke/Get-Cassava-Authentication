@@ -32,7 +32,7 @@ export default function VerificationPage() {
         // Handle missing parameters
         console.error("Email or token is missing");
     }
-}, []);
+}, [dispatch, email, token]);
   return (
     <div>
         {verified ? (<div>
