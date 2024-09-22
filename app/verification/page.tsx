@@ -33,6 +33,7 @@ export default function VerificationPage() {
         console.error("Email or token is missing");
     }
 }, [dispatch, email, token]);
+
   return (
     <div>
         {verified ? (<div>
