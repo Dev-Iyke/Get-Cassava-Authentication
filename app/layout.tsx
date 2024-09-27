@@ -4,7 +4,10 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { Provider } from "react-redux";
-import store from "@/redux_state/store";
+import store, { persistor } from "@/redux_state/store";
+import { PersistGate } from "redux-persist/integration/react";
+import Head from "next/head";
+import { useEffect } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,13 +30,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  useEffect(() => {
+    document.title = "Get Cassava";
+  }, []);
+
   return (
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Provider store={store}>
+          <PersistGate loading={null} persistor={persistor}>
           {children}
+          </PersistGate>
+          
         </Provider>
         
       </body>
