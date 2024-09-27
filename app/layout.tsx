@@ -6,7 +6,6 @@ import "./globals.css";
 import { Provider } from "react-redux";
 import store, { persistor } from "@/redux_state/store";
 import { PersistGate } from "redux-persist/integration/react";
-import Head from "next/head";
 import { useEffect } from "react";
 
 const geistSans = localFont({

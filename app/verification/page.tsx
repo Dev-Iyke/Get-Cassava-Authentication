@@ -1,7 +1,7 @@
 "use client";
 
 import { setVerificationDetails } from '@/redux_state/authSlice';
-import { AppDispatch, RootState } from '@/redux_state/store';
+import { AppDispatch } from '@/redux_state/store';
 import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
@@ -38,7 +38,7 @@ export default function VerificationPage() {
         router.push('/verify');
       }, 3000);
     }
-  }, [dispatch]);
+  }, [dispatch, router]);
 
   if (verified){
     dispatch(setVerificationDetails({ email, token }));

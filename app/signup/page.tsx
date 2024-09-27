@@ -83,7 +83,7 @@ const formSchema = z
     // const error = useSelector((state: RootState) => state.auth.error);
     const {user, error} = useSelector((state: RootState) => state.auth)
   
-    const cropTypes: any = [];
+    const cropTypes: string[] = [];
   
     const handleRegistration = async (values: z.infer<typeof formSchema>) => {
       console.log({ values });
@@ -136,10 +136,11 @@ const formSchema = z
             src="/auth-img/auth-logo.png"
             alt="Get Cassava Logo"
             className="mx-auto h-16 w-16"
+            width={64} height={64}
           />
         </div>
           <h2 className="text-center text-2xl font-bold text-black">Sign up with Get Cassava</h2>
-          <p className="text-black text-center">Let's get started by creating your account.To keep your account safe, we need a strong password</p>
+          <p className="text-black text-center">Let&apos;s get started by creating your account. To keep your account safe, we need a strong password</p>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(handleRegistration)} className="space-y-6">
               <FormField

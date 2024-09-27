@@ -50,6 +50,7 @@ export default function SignUp() {
             src="/auth-img/auth-logo.png"
             alt="Get Cassava Logo"
             className="mx-auto h-16 w-16"
+            width={64} height={64}
           />
         </div>
         {/* Welcome message */}

@@ -158,7 +158,7 @@ export const registerUser = createAsyncThunk('auth/registerUser', async (registr
     farmDetails: {
         farmLocation: string,
         farmName: string,
-        cropTypes: []
+        cropTypes: string[]
     },
     email: string,
     token: string

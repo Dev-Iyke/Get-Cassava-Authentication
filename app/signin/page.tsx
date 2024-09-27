@@ -8,6 +8,7 @@ import { loginUser } from '@/redux_state/authSlice';
 import { AppDispatch, RootState } from '@/redux_state/store';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { AlertCircle } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect } from 'react';
@@ -53,10 +54,11 @@ export default function SignIn() {
       <div className="w-full max-w-lg p-8 my-12 bg-white shadow-lg rounded-lg space-y-4">
         {/* Logo and Welcome Text */}
         <div className="mb-6">
-          <img
+          <Image
             src="/auth-img/auth-logo.png"
             alt="Get Cassava Logo"
             className="mx-auto h-16 w-16"
+            width={64} height={64}
           />
         </div>
         <h2 className="text-2xl font-semibold text-black text-center">Welcome Back!</h2>
